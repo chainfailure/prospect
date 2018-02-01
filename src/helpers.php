@@ -7,5 +7,5 @@ function to_satoshi($amount): ?int {
     if ($amount <= 0) 
         throw new InvalidArgumentException("specified amount [$amount] is not positive!");
 
-    return (int) ($amount * 100000000);
+    return (int) ($amount * 1e8);
 }
