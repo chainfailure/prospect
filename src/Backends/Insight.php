@@ -42,6 +42,5 @@ class Insight implements Backend
             json_decode($resp->getBody()),
             new Currency('XBT')
         );
-
     }
 }
