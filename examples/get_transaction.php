@@ -17,11 +17,11 @@ echo 'Fee: '.$transaction->getFee()->getAmount()."\n";
 
 echo "\n\n";
 echo '--------------------------'."\n";
-echo '|        Litecoin        |'."\n";
+echo '|         Bitcoin         |'."\n";
 echo '--------------------------'."\n";
-$litecoin = Currency::get('ltc');
-$transaction = $litecoin->getTransaction(
-    '0d624a3c5c7502c5d6f0412bc0432625b08f0d1b20eb0147cceca07a08026d01'
+$bitcoin = Currency::get('btc');
+$transaction = $bitcoin->getTransaction(
+    '814efde2e735d1e5fc252c2712baea9171516053d2b920c90a4d0f332eae3efc'
 );
 echo 'In: '.$transaction->getValueIn()->getAmount()."\n";
 echo 'Out: '.$transaction->getValueOut()->getAmount()."\n";
@@ -29,11 +29,11 @@ echo 'Fee: '.$transaction->getFee()->getAmount()."\n";
 
 echo "\n\n";
 echo '--------------------------'."\n";
-echo '|         Bitcoin         |'."\n";
+echo '|        Litecoin        |'."\n";
 echo '--------------------------'."\n";
-$bitcoin = Currency::get('btc');
-$transaction = $bitcoin->getTransaction(
-    '814efde2e735d1e5fc252c2712baea9171516053d2b920c90a4d0f332eae3efc'
+$litecoin = Currency::get('ltc');
+$transaction = $litecoin->getTransaction(
+    '0d624a3c5c7502c5d6f0412bc0432625b08f0d1b20eb0147cceca07a08026d01'
 );
 echo 'In: '.$transaction->getValueIn()->getAmount()."\n";
 echo 'Out: '.$transaction->getValueOut()->getAmount()."\n";
