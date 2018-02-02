@@ -1,10 +1,10 @@
 <?php
 
-namespace Prospect\Coins;
+namespace Prospect\Currencies;
 
 use Prospect\Backends\Backend;
 
-abstract class BaseCoin
+abstract class BaseCurrency
 {
     protected $backend;
 

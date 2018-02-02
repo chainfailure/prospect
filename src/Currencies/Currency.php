@@ -1,10 +1,10 @@
 <?php
 
-namespace Prospect\Coins;
+namespace Prospect\Currencies;
 
 use Prospect\Backends\Backend;
 
-interface Coin
+interface Currency
 {
     public function getBackend(): ?Backend;
     public function setBackend(Backend $backend): void;

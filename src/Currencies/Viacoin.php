@@ -1,11 +1,11 @@
 <?php
 
-namespace Prospect\Coins;
+namespace Prospect\Currencies;
 
 use Prospect\Backends\Backend;
 use Prospect\Backends\Insight;
 
-class Viacoin extends BaseCoin implements Coin
+class Viacoin extends BaseCurrency implements Currency
 {
     public function createNewBackend(): Backend
     {

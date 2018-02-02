@@ -2,12 +2,12 @@
 
 require '../vendor/autoload.php';
 
-use Prospect\Coin;
+use Prospect\Currency;
 
 echo '--------------------------'."\n";
 echo '|        Viacoin         |'."\n";
 echo '--------------------------'."\n";
-$viacoin = Coin::get('via');
+$viacoin = Currency::get('via');
 $address = $viacoin->getAddress(
     'Vrh9ro5WhykxrPPBe2cgyNiB2sAVqzkWjX'
 );
@@ -20,7 +20,7 @@ echo "\n\n";
 echo '--------------------------'."\n";
 echo '|        Litecoin        |'."\n";
 echo '--------------------------'."\n";
-$litecoin = Coin::get('ltc');
+$litecoin = Currency::get('ltc');
 $address = $litecoin->getAddress(
     'LbAw4wCLj9VAKxV4aeyRTygFdUxT1LiudY'
 );
