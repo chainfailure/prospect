@@ -7,7 +7,8 @@ use Money\Money;
 class Transaction
 {
     protected $id;
-    protected $block;
+    protected $blockHeight;
+    protected $blockHash;
     protected $size;
     protected $confirmations;
     protected $valueIn;
@@ -27,14 +28,24 @@ class Transaction
         $this->id = $id;
     }
 
-    public function getBlock(): string
+    public function getBlockHeight(): string
     {
-        return $this->block;
+        return $this->blockHeight;
     }
 
-    public function setBlock(string $block): void
+    public function setBlockHeight(string $blockHeight): void
     {
-        $this->block = $block;
+        $this->blockHeight = $blockHeight;
+    }
+
+    public function getBlockHash(): string
+    {
+        return $this->blockHash;
+    }
+
+    public function setBlockHash(string $blockHash): void
+    {
+        $this->blockHash = $blockHash;
     }
 
     public function getConfirmations(): int
