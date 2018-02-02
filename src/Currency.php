@@ -9,6 +9,7 @@ class Currency
 {
     static protected $currencies = [
         'via' => Currencies\Viacoin::class,
+        'btc' => Currencies\Bitcoin::class,
         'ltc' => Currencies\Litecoin::class,
     ];
 

@@ -11,6 +11,7 @@ Everyone seeking to build applications that utilize cryptocurrencies.
 |Currency|Code|Fetch transactions|Fetch addresses|
 |---|:---:|:---:|:---:|
 |Viacoin|`via`|:white_check_mark:|:white_check_mark:
+|Bitcoin|`btc`|:white_check_mark:|:white_check_mark:
 |Litecoin|`ltc`|:white_check_mark:|:white_check_mark:
 
 ## Fine, show me some code

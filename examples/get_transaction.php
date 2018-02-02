@@ -26,3 +26,15 @@ $transaction = $litecoin->getTransaction(
 echo 'In: '.$transaction->getValueIn()->getAmount()."\n";
 echo 'Out: '.$transaction->getValueOut()->getAmount()."\n";
 echo 'Fee: '.$transaction->getFee()->getAmount()."\n";
+
+echo "\n\n";
+echo '--------------------------'."\n";
+echo '|         Bitcoin         |'."\n";
+echo '--------------------------'."\n";
+$bitcoin = Currency::get('btc');
+$transaction = $bitcoin->getTransaction(
+    '814efde2e735d1e5fc252c2712baea9171516053d2b920c90a4d0f332eae3efc'
+);
+echo 'In: '.$transaction->getValueIn()->getAmount()."\n";
+echo 'Out: '.$transaction->getValueOut()->getAmount()."\n";
+echo 'Fee: '.$transaction->getFee()->getAmount()."\n";
