@@ -29,7 +29,7 @@ echo 'Fee: '.$transaction->getFee()->getAmount()."\n";
 ```
 
 How to fetch a Litecoin address's transactions and balance:
-```
+```php
 use Prospect\Currency;
 
 $litecoin = Currency::get('ltc');
