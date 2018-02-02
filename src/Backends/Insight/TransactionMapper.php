@@ -15,8 +15,13 @@ class TransactionMapper
         $transaction = new Transaction;
 
         $transaction->setId($data->txid);
-        $transaction->setBlock($data->blockhash);
+        $transaction->setBlockHeight($data->blockheight);
         $transaction->setConfirmations($data->confirmations);
+
+        // since unconfirmed transactions have not been placed in a block yet...
+        if ($transaction->getConfirmations() !== 0)
+            $transaction->setBlockHash($data->blockhash);
+
         $transaction->setSize($data->size);
 
         $valueIn  = new Money(to_satoshi($data->valueIn), $currency);
