@@ -2,6 +2,7 @@
 
 namespace Prospect\Backends;
 
+use Prospect\Address;
 use Prospect\Transaction;
 
 interface Backend
