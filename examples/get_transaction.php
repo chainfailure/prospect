@@ -38,3 +38,15 @@ $transaction = $litecoin->getTransaction(
 echo 'In: '.$transaction->getValueIn()->getAmount()."\n";
 echo 'Out: '.$transaction->getValueOut()->getAmount()."\n";
 echo 'Fee: '.$transaction->getFee()->getAmount()."\n";
+
+echo "\n\n";
+echo '--------------------------'."\n";
+echo '|          Dash          |'."\n";
+echo '--------------------------'."\n";
+$dash = Currency::get('dash');
+$transaction = $dash->getTransaction(
+    '7ac27faec12ab290ee03862aab23761c217fbbdca63df88641deca86efc80330'
+);
+echo 'In: '.$transaction->getValueIn()->getAmount()."\n";
+echo 'Out: '.$transaction->getValueOut()->getAmount()."\n";
+echo 'Fee: '.$transaction->getFee()->getAmount()."\n";

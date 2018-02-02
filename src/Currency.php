@@ -8,9 +8,10 @@ use Prospect\Backends\Backend;
 class Currency
 {
     static protected $currencies = [
-        'via' => Currencies\Viacoin::class,
-        'btc' => Currencies\Bitcoin::class,
-        'ltc' => Currencies\Litecoin::class,
+        'via'  => Currencies\Viacoin::class,
+        'btc'  => Currencies\Bitcoin::class,
+        'ltc'  => Currencies\Litecoin::class,
+        'dash' => Currencies\Dash::class,
     ];
 
     public static function get(string $identifier): Backend

@@ -41,3 +41,16 @@ echo 'Balance: '.$address->getBalance()->getAmount()."\n";
 echo 'Received: '.$address->getTotalReceived()->getAmount()."\n";
 echo 'Sent: '.$address->getTotalSent()->getAmount()."\n";
 echo 'Unconfirmed: '.$address->getUnconfirmedBalance()->getAmount()."\n";
+
+echo "\n\n";
+echo '--------------------------'."\n";
+echo '|          Dash          |'."\n";
+echo '--------------------------'."\n";
+$litecoin = Currency::get('dash');
+$address = $litecoin->getAddress(
+    'XmirwBzURUom15N428pe3RLMhuU9AFy8Gx'
+);
+echo 'Balance: '.$address->getBalance()->getAmount()."\n";
+echo 'Received: '.$address->getTotalReceived()->getAmount()."\n";
+echo 'Sent: '.$address->getTotalSent()->getAmount()."\n";
+echo 'Unconfirmed: '.$address->getUnconfirmedBalance()->getAmount()."\n";
