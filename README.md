@@ -1,6 +1,6 @@
 # Prospect
 
-***This project is still in early development, shit will change.***
+***This project is still in early development, shit will break, shit will change.***
 
 A PHP library for interaction with various cryptocurrencies.
 
