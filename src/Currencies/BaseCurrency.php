@@ -8,9 +8,13 @@ abstract class BaseCurrency
 {
     protected $backend;
 
-    public function __construct()
+    public function __construct(Backend $backend = null)
     {
-        $this->backend = $this->createNewBackend();
+        if (!$backend) {
+            $backend = $this->createNewBackend();
+        }
+
+        $this->setBackend($backend);
     }
 
     public function getBackend(): ?Backend
