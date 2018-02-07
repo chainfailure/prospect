@@ -9,6 +9,6 @@ class Viacoin extends BaseCurrency implements Currency
 {
     public function createNewBackend(): Backend
     {
-        return new Insight('https://explorer.viacoin.org/insight-via-api/');
+        return new Insight('https://explorer.viacoin.org/api/');
     }
 }
