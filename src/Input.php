@@ -2,19 +2,17 @@
 
 namespace Prospect;
 
-use Money\Money;
-
 class Input
 {
     protected $value;
     protected $transaction;
 
-    public function getValue(): ?Money
+    public function getValue(): ?int
     {
         return $this->value;
     }
 
-    public function setValue(Money $value): void
+    public function setValue(int $value): void
     {
         $this->value = $value;
     }

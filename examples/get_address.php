@@ -11,10 +11,10 @@ $viacoin = Currency::get('via');
 $address = $viacoin->getAddress(
     'Vrh9ro5WhykxrPPBe2cgyNiB2sAVqzkWjX'
 );
-echo 'Balance: '.$address->getBalance()->getAmount()."\n";
-echo 'Received: '.$address->getTotalReceived()->getAmount()."\n";
-echo 'Sent: '.$address->getTotalSent()->getAmount()."\n";
-echo 'Unconfirmed: '.$address->getUnconfirmedBalance()->getAmount()."\n";
+echo 'Balance: '.$address->getBalance()."\n";
+echo 'Received: '.$address->getTotalReceived()."\n";
+echo 'Sent: '.$address->getTotalSent()."\n";
+echo 'Unconfirmed: '.$address->getUnconfirmedBalance()."\n";
 
 echo "\n\n";
 echo '--------------------------'."\n";
@@ -24,10 +24,10 @@ $bitcoin = Currency::get('btc');
 $address = $bitcoin->getAddress(
     '1Krd6pVawBzzydPm5BnrQPtBQsZ7z1HU8d'
 );
-echo 'Balance: '.$address->getBalance()->getAmount()."\n";
-echo 'Received: '.$address->getTotalReceived()->getAmount()."\n";
-echo 'Sent: '.$address->getTotalSent()->getAmount()."\n";
-echo 'Unconfirmed: '.$address->getUnconfirmedBalance()->getAmount()."\n";
+echo 'Balance: '.$address->getBalance()."\n";
+echo 'Received: '.$address->getTotalReceived()."\n";
+echo 'Sent: '.$address->getTotalSent()."\n";
+echo 'Unconfirmed: '.$address->getUnconfirmedBalance()."\n";
 
 echo "\n\n";
 echo '--------------------------'."\n";
@@ -37,10 +37,10 @@ $litecoin = Currency::get('ltc');
 $address = $litecoin->getAddress(
     'LbAw4wCLj9VAKxV4aeyRTygFdUxT1LiudY'
 );
-echo 'Balance: '.$address->getBalance()->getAmount()."\n";
-echo 'Received: '.$address->getTotalReceived()->getAmount()."\n";
-echo 'Sent: '.$address->getTotalSent()->getAmount()."\n";
-echo 'Unconfirmed: '.$address->getUnconfirmedBalance()->getAmount()."\n";
+echo 'Balance: '.$address->getBalance()."\n";
+echo 'Received: '.$address->getTotalReceived()."\n";
+echo 'Sent: '.$address->getTotalSent()."\n";
+echo 'Unconfirmed: '.$address->getUnconfirmedBalance()."\n";
 
 echo "\n\n";
 echo '--------------------------'."\n";
@@ -50,7 +50,7 @@ $litecoin = Currency::get('dash');
 $address = $litecoin->getAddress(
     'XmirwBzURUom15N428pe3RLMhuU9AFy8Gx'
 );
-echo 'Balance: '.$address->getBalance()->getAmount()."\n";
-echo 'Received: '.$address->getTotalReceived()->getAmount()."\n";
-echo 'Sent: '.$address->getTotalSent()->getAmount()."\n";
-echo 'Unconfirmed: '.$address->getUnconfirmedBalance()->getAmount()."\n";
+echo 'Balance: '.$address->getBalance()."\n";
+echo 'Received: '.$address->getTotalReceived()."\n";
+echo 'Sent: '.$address->getTotalSent()."\n";
+echo 'Unconfirmed: '.$address->getUnconfirmedBalance()."\n";

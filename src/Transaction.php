@@ -2,8 +2,6 @@
 
 namespace Prospect;
 
-use Money\Money;
-
 class Transaction
 {
     protected $id;
@@ -68,32 +66,32 @@ class Transaction
         $this->size = $size;
     }
 
-    public function getValueIn(): Money
+    public function getValueIn(): int
     {
         return $this->valueIn;
     }
 
-    public function setValueIn(Money $valueIn): void
+    public function setValueIn(int $valueIn): void
     {
         $this->valueIn = $valueIn;
     }
 
-    public function getValueOut(): Money
+    public function getValueOut(): int
     {
         return $this->valueOut;
     }
 
-    public function setValueOut(Money $valueOut): void
+    public function setValueOut(int $valueOut): void
     {
         $this->valueOut = $valueOut;
     }
     
-    public function getFee(): Money
+    public function getFee(): int
     {
         return $this->fee;
     }
 
-    public function setFee(Money $fee): void
+    public function setFee(int $fee): void
     {
         $this->fee = $fee;
     }

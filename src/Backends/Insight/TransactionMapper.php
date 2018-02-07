@@ -2,15 +2,13 @@
 
 namespace Prospect\Backends\Insight;
 
-use Money\Money;
 use Prospect\Input;
 use Prospect\Output;
-use Money\Currency;
 use Prospect\Transaction;
 
 class TransactionMapper
 {
-    public function fromResponse($data, Currency $currency): ?Transaction
+    public function fromResponse($data): ?Transaction
     {
         $transaction = new Transaction;
 
@@ -24,19 +22,16 @@ class TransactionMapper
 
         $transaction->setSize($data->size);
 
-        $valueIn  = new Money(to_satoshi($data->valueIn), $currency);
-        $valueOut = new Money(to_satoshi($data->valueOut), $currency);
-        $fee      = new Money(to_satoshi($data->fees), $currency);
-        $transaction->setValueIn($valueIn);
-        $transaction->setValueOut($valueOut);
-        $transaction->setFee($fee);
+        $transaction->setValueIn(to_satoshi($data->valueIn));
+        $transaction->setValueOut(to_satoshi($data->valueOut));
+        $transaction->setFee(to_satoshi($data->fees));
 
         $transaction->setInputs(
-            $this->mapInputs($data->vin, $currency)
+            $this->mapInputs($data->vin)
         );
 
         $transaction->setOutputs(
-            $this->mapOutputs($data->vout, $currency)
+            $this->mapOutputs($data->vout)
         );
 
         return $transaction;
@@ -54,28 +49,24 @@ class TransactionMapper
         }
     }
 
-    protected function mapInputs($inputs, $currency): array
+    protected function mapInputs($inputs): array
     {
-        return array_map(function ($item) use ($currency) {
+        return array_map(function ($item) {
             $input = new Input;
             $input->setTransaction($item->txid);
-            $input->setValue(
-                new Money($item->valueSat, $currency)
-            );
+            $input->setValue($item->valueSat);
             return $input;
         }, $inputs);
     }
 
-    protected function mapOutputs($outputs, $currency): array
+    protected function mapOutputs($outputs): array
     {
-        return array_map(function ($item) use ($currency) {
+        return array_map(function ($item) {
             $type = $item->scriptPubKey->type;
 
             $output = new Output;
             $output->setType($type);
-            $output->setValue(
-                new Money(to_satoshi($item->value), $currency)
-            );
+            $output->setValue(to_satoshi($item->value));
             return $output;
         },$outputs);
     }

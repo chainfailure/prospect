@@ -2,8 +2,6 @@
 
 namespace Prospect;
 
-use Money\Money;
-
 class Address
 {
     protected $address;
@@ -22,42 +20,42 @@ class Address
         $this->address = $address;
     }
 
-    public function getBalance(): Money
+    public function getBalance(): int
     {
         return $this->balance;
     }
 
-    public function setBalance(Money $balance): void
+    public function setBalance(int $balance): void
     {
         $this->balance = $balance;
     }
 
-    public function getTotalReceived(): Money
+    public function getTotalReceived(): int
     {
         return $this->totalReceived;
     }
 
-    public function setTotalReceived(Money $totalReceived): void
+    public function setTotalReceived(int $totalReceived): void
     {
         $this->totalReceived = $totalReceived;
     }
 
-    public function getTotalSent(): Money
+    public function getTotalSent(): int
     {
         return $this->totalSent;
     }
 
-    public function setTotalSent(Money $totalSent): void
+    public function setTotalSent(int $totalSent): void
     {
         $this->totalSent = $totalSent;
     }
 
-    public function getUnconfirmedBalance(): Money
+    public function getUnconfirmedBalance(): int
     {
         return $this->unconfirmedBalance;
     }
 
-    public function setUnconfirmedBalance(Money $unconfirmedBalance): void
+    public function setUnconfirmedBalance(int $unconfirmedBalance): void
     {
         $this->unconfirmedBalance = $unconfirmedBalance;
     }

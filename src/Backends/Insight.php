@@ -2,7 +2,6 @@
 
 namespace Prospect\Backends;
 
-use Money\Currency;
 use Prospect\Address;
 use GuzzleHttp\Client;
 use Prospect\Transaction;
@@ -28,8 +27,7 @@ class Insight implements Backend
 
         // please fix me
         return (new TransactionMapper)->fromResponse(
-            json_decode($resp->getBody()),
-            new Currency('XBT')
+            json_decode($resp->getBody())
         );
     }
 
@@ -39,8 +37,7 @@ class Insight implements Backend
 
         // please fix me
         return (new AddressMapper)->fromResponse(
-            json_decode($resp->getBody()),
-            new Currency('XBT')
+            json_decode($resp->getBody())
         );
     }
 }

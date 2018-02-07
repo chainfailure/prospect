@@ -2,8 +2,6 @@
 
 namespace Prospect;
 
-use Money\Money;
-
 class Output
 {
     const TYPE_PUBKEYHASH = 'pubkeyhash';
@@ -21,12 +19,12 @@ class Output
         $this->type = $type;
     }
 
-    public function getValue(): ?Money
+    public function getValue(): ?int
     {
         return $this->value;
     }
 
-    public function setValue(Money $value): void
+    public function setValue(int $value): void
     {
         $this->value = $value;
     }
