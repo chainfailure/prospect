@@ -5,7 +5,7 @@
 A PHP library for interaction with various cryptocurrencies.
 
 ## Who is this for?
-Everyone seeking to build applications that utilize cryptocurrencies.
+Everyone seeking to query specific information from a cryptocurrency's blockchain.
 
 ## What can it do?
 |Currency|Code|Fetch transactions|Fetch addresses|
