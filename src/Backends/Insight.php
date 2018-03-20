@@ -40,4 +40,16 @@ class Insight implements Backend
             json_decode($resp->getBody())
         );
     }
+
+    public function getAddresses(array $addresses): ?array
+    {
+        $addresses = [];
+
+        foreach ($addresses as $address) {
+            $addresses[] = $this->getAddress($address);
+        }
+
+        return $addresses;
+    }
+
 }
