@@ -43,13 +43,13 @@ class Insight implements Backend
 
     public function getAddresses(array $addresses): ?array
     {
-        $addresses = [];
+        $data = [];
 
         foreach ($addresses as $address) {
-            $addresses[] = $this->getAddress($address);
+            $data[] = $this->getAddress($address);
         }
 
-        return $addresses;
+        return $data;
     }
 
 }
